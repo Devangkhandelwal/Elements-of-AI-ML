@@ -8,13 +8,13 @@ from imblearn.over_sampling import SMOTE
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import classification_report, confusion_matrix, roc_curve, auc
-from sklearn.metrics import ConfusionMatrixDisplay  # Updated for confusion matrix visualization
+from sklearn.metrics import ConfusionMatrixDisplay  
 
 # Step 1 & 2: Data Import and Basic Exploration
-df = pd.read_csv('Bank Customer Churn Prediction.csv')  # Replace with actual file path
-print(df.info())  # Check the data structure
-print(df.describe())  # Basic statistics
-print(df.isnull().sum())  # Check for missing values
+df = pd.read_csv('Bank Customer Churn Prediction.csv')  
+print(df.info()) 
+print(df.describe())
+print(df.isnull().sum())
 
 # Step 3: Exploratory Data Analysis (EDA)
 sns.countplot(x='churn', data=df)
